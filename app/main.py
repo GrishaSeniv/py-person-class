@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-
 class Person:
     people = {}
 
@@ -11,7 +8,7 @@ class Person:
         Person.people[name] = self
 
     @classmethod
-    def get_or_create(cls, key: str, person: dict) -> Person:
+    def get_or_create(cls, key: str, person: dict) -> "Person":
         person_name = person[key]
 
         if person_name in cls.people:
